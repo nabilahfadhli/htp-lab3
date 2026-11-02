@@ -14,6 +14,19 @@ jobs:
       - name: Display Repository Tree
         run: tree
 
+      - name: Change README Header using sed
+        run: |
+         echo "=== Modifying README Header ==="
+         # This swaps any line starting with '#' to '# My Checkout'
+         sed -i 's/^#.*/# My Checkout - Approved/' README.md
+        shell: bash
+       
+      - name: Verify Modified README
+        run: |
+         echo "=== Checking current README contents ==="
+         cat README.md
+        shell: bash
+
       - name: Greet the user
         run: |
          echo "Hello ${{github.actor}}"
