@@ -17,5 +17,5 @@ jobs:
       - name: Greet the user
         run: |
          echo "Hello ${{github.actor}}"
-         echo"Current branch is '${{github.ref}}'"
+         echo "Current branch is '${{github.ref}}'"
         shell: bash
