@@ -8,7 +8,14 @@ jobs:
   first_job:
     name: My First Job
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Display Repository Tree
+        run: tree
+
       - name: Greet the user
-        run: echo "Hello ${{github.actor}}"
+        run: |
+         echo "Hello ${{github.actor}}"
+         echo"Current branch is '${{github.ref}}'"
         shell: bash
