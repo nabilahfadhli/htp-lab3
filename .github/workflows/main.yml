@@ -32,5 +32,7 @@ jobs:
          echo "Hello ${{github.actor}}"
          echo "Current branch is '${{github.ref}}'"
          echo "My API key will '${{secrets.APIKEY}}'"
-         echo "My Persekitaran is '${{vars.API_KEY}}'"
+    env:
+        API_KEY: ${{ secrets.APIKEY }}
+        MYPERSEKITARAN: ${{ vars.LAB3_TESTHTP }}
         shell: bash
