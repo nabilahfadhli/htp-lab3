@@ -31,4 +31,6 @@ jobs:
         run: |
          echo "Hello ${{github.actor}}"
          echo "Current branch is '${{github.ref}}'"
+         echo "My API key will '${{secrets.APIKEY}}'"
+         echo "My Persekitaran is '${{vars.API_KEY}}'"
         shell: bash
